@@ -1,12 +1,16 @@
 #include <iostream>
 #include <string>
+#include "TodoList.h"
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-  for (int i =  0; i < argc; i++)
-  {
+int main(int argc, char *argv[]){
+	TodoList myList;
+  for (int i =  0; i < argc; i++){
     cout << "argv[" << i << "] = " << argv[i] << endl;
+		string date = argv[2];
+		string task = argv[3];
+		cout << "date: " << date << " task: " << task << endl;
+		myList.add(date, task);
   }
   string firstarg = argv[1];
   if (firstarg.compare("add") == 0) 

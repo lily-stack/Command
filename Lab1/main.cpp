@@ -18,4 +18,11 @@ int main(int argc, char *argv[]){
 		cout << "date: " << date << " task: " << task << endl;
 		myList.add(date, task);
   }
+	if (firstarg.compare("remove") == 0) {
+		cout << "Doing a remove" << endl;
+		string task = argv[2];
+		cout << "task: " << task << endl;
+		myList.remove(task);
+	}
+	if (firstarg.compare("printList"))
 }

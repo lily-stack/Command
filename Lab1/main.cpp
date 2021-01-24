@@ -24,5 +24,11 @@ int main(int argc, char *argv[]){
 		cout << "task: " << task << endl;
 		myList.remove(task);
 	}
-	if (firstarg.compare("printList"))
+	if (firstarg.compare("printList") == 0) {
+		myList.printTodoList();
+	}
+	if (firstarg.compare("printDay") == 0) {
+		string date = argv[2];
+		myList.printDaysTasks(date);
+	}
 }
